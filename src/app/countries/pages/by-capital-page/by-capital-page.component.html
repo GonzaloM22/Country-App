@@ -9,7 +9,8 @@
 
 <hr>
 <div class="row">
-    <div class="col">
+    <shared-spinner *ngIf="isLoading; else table" class="d-flex justify-content-center"></shared-spinner>
+    <ng-template class="col" #table>
         <countries-table [countries]="countries"></countries-table>
-    </div>
+    </ng-template>
 </div>
